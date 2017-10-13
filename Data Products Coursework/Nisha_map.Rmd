@@ -1,0 +1,26 @@
+---
+title: "Nisha's Map"
+author: "Nisha Shah"
+date: "October 12, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## <date>
+
+
+```{r, echo=FALSE, warning=FALSE}
+
+library(leaflet)
+my_map <- leaflet() %>% 
+  addTiles()
+
+my_map <- my_map %>%
+  addMarkers(lat=33.7477920, lng=-118.0374230, 
+             popup="Nisha Shah's Office")
+my_map
+```
+
